@@ -1,0 +1,9 @@
+{
+"income_workers": [
+                    {"Ivanov": 50000}, 
+                    {"Petrov": 18000}, 
+                    {"Fedorov": 13000}, 
+                    {"Vasechkin": 46000}, 
+                    {"Sitov": 64000}
+                   ]
+}
