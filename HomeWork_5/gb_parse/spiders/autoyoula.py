@@ -1,6 +1,5 @@
 import scrapy
 from ..loaders import AutoYoulaLoader
-import re
 
 
 class AutoyoulaSpider(scrapy.Spider):
@@ -20,7 +19,8 @@ class AutoyoulaSpider(scrapy.Spider):
         'title': "//div[@data-target='advert-title']/text()",
         'list_imgs': "//figure/picture/img/@src",
         'characteristics': "//h3[contains(text(), 'Характеристики')]/..//div[contains(@class, 'AdvertSpecs_row')]",
-        'descriptions': "//div[@data-target='advert']//div[@data-target='advert-info-descriptionFull']/text()"
+        'descriptions': "//div[@data-target='advert']//div[@data-target='advert-info-descriptionFull']/text()",
+        'phone': "//script[contains(text(), 'window.transitState = decodeURIComponent')]/text()"
     }
 
     def __init__(self, *args, **kwargs):
@@ -47,4 +47,3 @@ class AutoyoulaSpider(scrapy.Spider):
             loader.add_xpath(key, xpath)
 
         yield loader.load_item()
-

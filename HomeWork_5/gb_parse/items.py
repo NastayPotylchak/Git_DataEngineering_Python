@@ -18,3 +18,4 @@ class GbAutoYoulaItem(scrapy.Item):
     list_imgs = scrapy.Field()
     characteristics = scrapy.Field()
     descriptions = scrapy.Field()
+    phone = scrapy.Field()
